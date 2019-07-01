@@ -8,6 +8,7 @@ import org.bouncycastle.util.io.pem.PemWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.Base64;
 
 public class CmpHelper {
 
@@ -26,6 +27,7 @@ public class CmpHelper {
         pemWriter.close();
         String textPublicKey = textWriter.toString();
         System.out.println(textPublicKey);
+//        System.out.println(Base64.getMimeDecoder().decode(textPublicKey));
     }
 
 }

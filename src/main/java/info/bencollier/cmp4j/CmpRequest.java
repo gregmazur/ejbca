@@ -91,7 +91,7 @@ public class CmpRequest {
      * @return                              Keypair.
      * @throws NoSuchAlgorithmException     Thrown if the algorithm passed to the constructor does not exist.
      */
-    private static KeyPair genKeyPair(int keyBytes, String keyAlgorithm) throws NoSuchAlgorithmException {
+    public static KeyPair genKeyPair(int keyBytes, String keyAlgorithm) throws NoSuchAlgorithmException {
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance(keyAlgorithm);
         keyGen.initialize(keyBytes);
         return keyGen.generateKeyPair();

@@ -64,7 +64,7 @@ public class CmpProtectedRequest {
         try {
             MacCalculator macCalculator = setupPKMAC();
             CertReqMessages messages = new CertReqMessages(this.request.toASN1Structure());
-            PKIBody initialRequest = new PKIBody(PKIBody.TYPE_INIT_REQ, messages);
+            PKIBody initialRequest = new PKIBody(PKIBody.TYPE_CERT_REQ, messages);
 
             this.protectedMessage = createProtectedMessage(this.nonce, this.transactionId, this.subjectDN,
                     this.issuerDN, initialRequest, macCalculator, this.keyId);
